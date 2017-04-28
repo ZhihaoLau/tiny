@@ -53,11 +53,11 @@ export default {
   display: block;
   height: 12px;
   width: 12px;
-  animation: img-checked .3s ease-in;
+  animation: img-checked .2s ease-out;
 }
 @keyframes img-checked {
   0% { transform: scale(0.1, 0.1); }
-  80% { transform: scale(1.2, 1.2); }
+  90% { transform: scale(1.3, 1.3); }
   100% { transform: scale(1, 1); }
 }
 </style>
