@@ -1,19 +1,17 @@
 <template lang="html">
   <div class="lazy-load-page">
     <p>LazyLoadPage</p>
-    <lazy-img-container class="area">
+    <div class="area">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, consequatur! Nesciunt, ipsa quos. Atque illum impedit et tempora laudantium, placeat, cumque voluptates vel qui adipisci ipsa minima natus saepe, quo.</p>
-      <img src="https://cdn.dribbble.com/users/25686/screenshots/3462705/dribbble4_1x.jpg" />
+      <lazy-img dataSrc="http://veryawesomeproject.oss-cn-shenzhen.aliyuncs.com/walk-spread-02_1x.png" />
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, consequatur! Nesciunt, ipsa quos. Atque illum impedit et tempora laudantium, placeat, cumque voluptates vel qui adipisci ipsa minima natus saepe, quo.</p>
-      <lazy-img
-        dataSrc="https://cdn.dribbble.com/users/35877/screenshots/3462035/grace-beziers-dribbble_1x.jpg"
-      />
+      <lazy-img dataSrc="http://veryawesomeproject.oss-cn-shenzhen.aliyuncs.com/walk-spread-03_1x.png" />
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, consequatur! Nesciunt, ipsa quos. Atque illum impedit et tempora laudantium, placeat, cumque voluptates vel qui adipisci ipsa minima natus saepe, quo.</p>
-      <img src="https://cdn.dribbble.com/users/203/screenshots/3462390/dribbble.vwmarks_1x.png" />
+      <lazy-img dataSrc="http://veryawesomeproject.oss-cn-shenzhen.aliyuncs.com/walk-spread-05_1x.png" />
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, consequatur! Nesciunt, ipsa quos. Atque illum impedit et tempora laudantium, placeat, cumque voluptates vel qui adipisci ipsa minima natus saepe, quo.</p>
-      <img src="https://cdn.dribbble.com/users/164367/screenshots/3462970/good-grip-athletic-chalk_1x.png" />
+      <lazy-img dataSrc="http://veryawesomeproject.oss-cn-shenzhen.aliyuncs.com/walk-spread-06_1x.png" />
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, consequatur! Nesciunt, ipsa quos. Atque illum impedit et tempora laudantium, placeat, cumque voluptates vel qui adipisci ipsa minima natus saepe, quo.</p>
-    </lazy-img-container>
+    </div>
   </div>
 </template>
 
@@ -42,5 +40,10 @@ export default {
   border: 1px solid #ddd;
   overflow-x: hidden;
   overflow-y: auto;
+}
+.area img {
+  display: inline-block;
+  min-height: 300px;  /* for demo */
+  background-color: #eee;
 }
 </style>

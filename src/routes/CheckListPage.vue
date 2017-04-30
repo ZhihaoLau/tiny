@@ -1,15 +1,60 @@
 <template lang="html">
   <div class="check-list-page">
-    <h4><router-link to="/">&lt;-返回</router-link></h4>
+    <div class="doc">
+      <h3># Template:</h3>
+      <pre v-highlightjs>
+        <code class="javascript">
+          &lt;check-list
+            v-model="selected"
+            :options="options"
+            :toggleAllAble="true"
+          /&gt;
+        </code>
+      </pre>
 
+      <h3># Props: </h3>
+
+      <p><b>[v-model]</b> - Array of selected options</p>
+
+      <p><b>[options]</b> - Array of option, for example: </p>
+      <pre v-highlightjs>
+        <code class="javascript">
+          options: [
+            {
+              label: 'Disabled',
+              value: 'Disabled-Value',
+              disabled: true
+            },
+            {
+              label: 'Selected-Disabled',
+              value: 'Selected-Disabled-Value',
+              disabled: true
+            },
+            {
+              label: 'Option A',
+              value: 'OptionA'
+            },
+            {
+              label: 'Option B',
+              value: 'OptionB'
+            }
+          ]
+        </code>
+      </pre>
+
+      <p><b>[toggleAllAble]</b> - Boolean, if true, enable the 'Select All/None' button</p>
+
+      <h3># Sample:</h3>
+    </div>
     <div class="container">
       <check-list
         v-model="selected"
         :options="options"
         :toggleAllAble="true"
       />
-      <p>选中的值: {{ selected.map(item => item.label) }}</p>
+      <p>Selected: {{ selected.map(item => item.label) }}</p>
     </div>
+    <br><br><br>
   </div>
 </template>
 
@@ -25,22 +70,22 @@ export default {
       selected: [],
       options: [
         {
-          label: '被禁用',
-          value: '值F',
+          label: 'Disabled',
+          value: 'Disabled-Value',
           disabled: true
         },
         {
-          label: '选中禁用',
-          value: '选中禁用的值',
+          label: 'Selected-Disabled',
+          value: 'Selected-Disabled-Value',
           disabled: true
         },
         {
-          label: '选项A',
-          value: '值A'
+          label: 'Option A',
+          value: 'OptionA'
         },
         {
-          label: '选项B',
-          value: '值B'
+          label: 'Option B',
+          value: 'OptionB'
         }
       ]
     }

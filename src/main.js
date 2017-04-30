@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+require('./directives')
+require('highlight.js/styles/github.css')
 
 Vue.config.productionTip = false
 

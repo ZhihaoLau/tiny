@@ -46,7 +46,7 @@ export default {
   transition: all .1s ease-out;
 }
 .check-list-option span.checkbox.checked {
-  background-color: #4fc08d;
+  background-color: #6D95EE;
   border: none;
 }
 .check-list-option span.checkbox img {

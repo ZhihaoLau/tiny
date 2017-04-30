@@ -13,7 +13,7 @@
       <span class="checkbox" :class="{ 'checked': isAllSelected }">
         <img v-if="isAllSelected" src="~@/assets/checked.svg" />
       </span>
-      <span>全选/全不选</span>
+      <span>Select All/None</span>
     </a>
   </ul>
 </template>
@@ -99,7 +99,7 @@ export default {
   transition: all .1s ease-out;
 }
 .toggle-all-btn .checkbox.checkbox.checked {
-  background-color: #4fc08d;
+  background-color: #6D95EE;
   border: none;
 }
 .toggle-all-btn .checkbox.checkbox img {
