@@ -20,7 +20,7 @@
 
 <script>
 import Vue from 'vue'
-import CheckListItem from './CheckListItem'
+import CheckListItem from '@/components/CheckListItem'
 export default {
   name: 'CheckList',
   components: {
