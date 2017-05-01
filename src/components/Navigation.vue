@@ -15,6 +15,11 @@ export default {
 </script>
 
 <style scoped>
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 h1, h2 {
   font-weight: normal;
 }

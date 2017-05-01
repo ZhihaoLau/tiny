@@ -5,8 +5,12 @@
       <span>A light-weight UI Library for Vue.js</span>
     </header>
     <navigation></navigation>
-
-    <router-view></router-view>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+    <footer>
+      Released under the MIT License Copyright © 2017 <a href="http://www.lozio.me">Zio Lau</a>
+    </footer>
   </div>
 </template>
 
@@ -25,7 +29,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
@@ -45,23 +48,27 @@ export default {
   font-size: 20px;
   font-weight: bold;
 }
-.doc {
-  width: 40vw;
-  min-width: 400px;
-  text-align: left;
-}
-.doc table {
-  display: block;
+.content {
+  box-sizing: border-box;
   width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
-  padding: 10px;
+  padding: 5px;
+  max-width: 860px;
+  margin: 0 auto;
 }
-.doc table th,
-.doc table tr {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.doc {
+  width: 100%;
+}
+.hljs {
+  padding: 15px !important;
+  font-size: 14px;
+}
+footer {
+  text-align: center;
+  padding: 50px 0;
+  color: black;
+}
+footer a {
+  color: #6D95EE;
+  text-decoration-line: none;
 }
 </style>

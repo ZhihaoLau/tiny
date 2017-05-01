@@ -1,5 +1,5 @@
 <template lang="html">
-  <li class="check-list-option" @click.prevent="toggle">
+  <li class="check-list-option" :class="{ 'disabled': option.disabled }" @click.prevent="toggle">
     <span class="checkbox" :class="{ 'checked': option.checked }">
       <img v-if="option.checked" src="~@/assets/checked.svg" />
     </span>
@@ -18,6 +18,7 @@ export default {
   },
   methods: {
     toggle () {
+      if (this.option.disabled) return
       this.$emit('toggle', this.option)
     }
   }
@@ -31,6 +32,10 @@ export default {
   align-items: center;
   cursor: default;
   user-select: none;
+}
+.check-list-option.disabled {
+  opacity: .8;
+  cursor: not-allowed;
 }
 .check-list-option span.checkbox {
   box-sizing: border-box;
@@ -49,11 +54,17 @@ export default {
   background-color: #6D95EE;
   border: none;
 }
+.check-list-option.disabled span.checkbox.checked {
+  background-color: #bbb;
+}
 .check-list-option span.checkbox img {
   display: block;
   height: 12px;
   width: 12px;
   animation: img-checked .2s ease-out;
+}
+.check-list-option.disabled span.checkbox img {
+  animation: none;
 }
 @keyframes img-checked {
   0% { transform: scale(0.1, 0.1); }

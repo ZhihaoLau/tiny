@@ -20,7 +20,7 @@
 
 <script>
 import Vue from 'vue'
-import CheckListItem from '@/components/CheckListItem'
+import CheckListItem from './CheckListItem'
 export default {
   name: 'CheckList',
   components: {
@@ -42,30 +42,56 @@ export default {
   },
   data () {
     return {
-      options_copy: this.options.map(o => Object.assign({}, o, { checked: false }))
+      options_copy: this.options.map(o => {
+        return Object.assign({}, o, {
+          checked: this.isOptionSelected(o)
+        })
+      })
     }
   },
   computed: {
     checkedOptions () {
       return this.options_copy.filter(o => o.checked)
     },
+    /**
+     * Is all selectable option selected
+     */
     isAllSelected () {
-      return !this.options_copy.some(o => !o.checked)
+      return !this.options_copy
+        .filter(o => !o.disabled)
+        .some(o => !o.checked)
     }
   },
   methods: {
+    // Checked if option in selected,
+    // consider true, only if they have the save value
+    isOptionSelected (option) {
+      return this.value.find(o => {
+        return o.value === option.value
+      })
+    },
     toggleOption (option) {
       Vue.set(option, 'checked', !option.checked)
       this.$emit('input', this.checkedOptions)
     },
     toggleAll () {
       if (this.isAllSelected) {
-        this.options_copy = this.options.map(o => Object.assign({}, o, { checked: false }))
+        this.options_copy = this.options_copy.map(o => {
+          if (o.disabled) {
+            return Object.assign({}, o)
+          }
+          return Object.assign({}, o, { checked: false })
+        })
         this.$emit('input', this.checkedOptions)
         return
       }
 
-      this.options_copy = this.options.map(o => Object.assign({}, o, { checked: true }))
+      this.options_copy = this.options_copy.map(o => {
+        if (o.disabled) {
+          return Object.assign({}, o)
+        }
+        return Object.assign({}, o, { checked: true })
+      })
       this.$emit('input', this.checkedOptions)
     }
   }

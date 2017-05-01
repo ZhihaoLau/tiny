@@ -1,7 +1,6 @@
 <template lang="html">
   <div class="lazy-load-page">
-    <p>LazyLoadPage</p>
-    <div class="area">
+    <div class="demo">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, consequatur! Nesciunt, ipsa quos. Atque illum impedit et tempora laudantium, placeat, cumque voluptates vel qui adipisci ipsa minima natus saepe, quo.</p>
       <lazy-img dataSrc="http://veryawesomeproject.oss-cn-shenzhen.aliyuncs.com/walk-spread-02_1x.png" />
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, consequatur! Nesciunt, ipsa quos. Atque illum impedit et tempora laudantium, placeat, cumque voluptates vel qui adipisci ipsa minima natus saepe, quo.</p>
@@ -34,14 +33,19 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-.area {
+.lazy-load-page .demo {
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
   height: 50vh;
-  width: 60vw;
   border: 1px solid #ddd;
   overflow-x: hidden;
   overflow-y: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
 }
-.area img {
+.lazy-load-page .demo img {
   display: inline-block;
   min-height: 300px;  /* for demo */
   background-color: #eee;
