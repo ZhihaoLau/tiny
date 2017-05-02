@@ -9,7 +9,7 @@
       <router-view></router-view>
     </div>
     <footer>
-      Released under the MIT License Copyright © 2017 <a href="http://www.lozio.me" target="_blank">Zio Lau</a>
+      Released under the MIT License Copyright © 2017 <a href="http://www.lozio.me" target="_blank">Zio Lau</a> | <a href="https://github.com/ZhihaoLau/tiny">Github</a>
     </footer>
   </div>
 </template>
