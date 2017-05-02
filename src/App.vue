@@ -9,7 +9,7 @@
       <router-view></router-view>
     </div>
     <footer>
-      Released under the MIT License Copyright © 2017 <a href="http://www.lozio.me">Zio Lau</a>
+      Released under the MIT License Copyright © 2017 <a href="http://www.lozio.me" target="_blank">Zio Lau</a>
     </footer>
   </div>
 </template>
@@ -17,7 +17,7 @@
 <script>
 import Navigation from '@/components/Navigation'
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     Navigation
   }
@@ -61,6 +61,11 @@ export default {
 .hljs {
   padding: 15px !important;
   font-size: 14px;
+}
+blockquote {
+  border-left: 3px solid #6D95EE;
+  padding-left: 15px;
+  margin: 15px 0;
 }
 footer {
   text-align: center;

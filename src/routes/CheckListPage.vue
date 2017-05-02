@@ -118,9 +118,4 @@ export default {
   border: 1px solid #ddd;
   text-align: left;
 }
-blockquote {
-  border-left: 3px solid #6D95EE;
-  padding-left: 15px;
-  margin: 15px 0;
-}
 </style>

@@ -11,4 +11,7 @@ export default {
 </script>
 
 <style lang="css">
+.scroll-bar-page {
+  text-align: center;
+}
 </style>
